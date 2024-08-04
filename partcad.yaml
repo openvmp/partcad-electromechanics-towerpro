@@ -1,0 +1,40 @@
+desc: TowerPro parts
+docs:
+  name: /pub/robotics/parts/towerpro
+
+import:
+  pub:
+    onlyInRoot: True
+    type: git
+    url: https://github.com/openvmp/partcad-index/
+
+parts:
+  servo/mg90s:
+    type: step # Courtesy of Oleksii Pryimachenko, https://grabcad.com/library/tower-pro-mg90s-micro-servo-2
+    desc: MG90S digital servo
+    vendor: towerpro
+    sku: mg90s-3
+    url: https://www.towerpro.com.tw/product/mg90s-3/
+    implements:
+      "/pub/std/metric/m:m2.5-threaded-hole-4":
+        screw: [[5.375, 21.0, 0], [1, 0, 0], 90]
+      "/pub/std/metric/m:m2.5-hole-2.5":
+        mount-top: [[13.75, 9.6, 0], [1, 0, 0], 90]
+        mount-bottom: [[-13.75, 9.6, 0], [1, 0, 0], 90]
+  servo/shoulder-unidir:
+    type: step # Courtesy of Oleksii Pryimachenko, https://grabcad.com/library/tower-pro-mg90s-micro-servo-2
+    desc: Unidirectional shoulder, comes with MG90S digital servo
+    vendor: towerpro
+    implements:
+      "/pub/std/metric/m:m2.5-hole-1":
+        outer: [[0, 1.5, 0], [1, 0, 0], 90]
+        inner: [[0, 0.5, 0], [1, 0, 0], -90]
+
+assemblies:
+  example/mg90s:
+    type: assy
+    desc: An example assembly with MG90S servo
+
+render:
+  svg:
+  readme:

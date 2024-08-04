@@ -1,0 +1,45 @@
+links:
+  # Servo motor itself
+  - part: servo/mg90s
+    name: motor
+
+  # Mounting screws
+  - part: fastener/socketheadcap-iso4762
+    package: /pub/std/metric/cqwarehouse
+    name: screw-top
+    params:
+      size: M2.5-0.45
+      length: 10
+    connect:
+      name: motor
+      to: "/pub/std/metric/m:m2.5-hole-2.5"
+      toInstance: mount-top
+  - part: fastener/socketheadcap-iso4762
+    package: /pub/std/metric/cqwarehouse
+    name: screw-bottom
+    params:
+      size: M2.5-0.45
+      length: 10
+    connect:
+      name: motor
+      to: "/pub/std/metric/m:m2.5-hole-2.5"
+      toInstance: mount-bottom
+
+  # Servo shoulder
+  - part: servo/shoulder-unidir
+    name: shoulder
+    connect:
+      withInstance: inner
+      name: motor
+      to: "/pub/std/metric/m:m2.5-threaded-hole-4"
+  - part: fastener/countersunk-iso7046
+    package: /pub/std/metric/cqwarehouse
+    name: screw-bottom
+    params:
+      size: M2.5-0.45
+      length: 3.5
+    connect:
+      withParams:
+        moveZ: 0.35
+      name: shoulder
+      toInstance: outer
