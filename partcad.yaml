@@ -1,6 +1,6 @@
 desc: TowerPro parts
 docs:
-  name: /pub/robotics/parts/towerpro
+  name: /pub/electromechanics/towerpro
 
 import:
   pub:
