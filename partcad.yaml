@@ -19,8 +19,10 @@ parts:
       "/pub/std/metric/m:m2.5-threaded-hole-4":
         screw: [[5.375, 21.0, 0], [1, 0, 0], 90]
       "/pub/std/metric/m:m2.5-hole-2.5":
-        mount-top: [[13.75, 9.6, 0], [1, 0, 0], 90]
-        mount-bottom: [[-13.75, 9.6, 0], [1, 0, 0], 90]
+        mount-top-front: [[13.75, 9.6, 0], [1, 0, 0], 90]
+        mount-top-rear: [[13.75, 7.1, 0], [1, 0, 0], -90]
+        mount-bottom-front: [[-13.75, 9.6, 0], [1, 0, 0], 90]
+        mount-bottom-rear: [[-13.75, 7.1, 0], [1, 0, 0], -90]
   servo/shoulder-unidir:
     type: step # Courtesy of Oleksii Pryimachenko, https://grabcad.com/library/tower-pro-mg90s-micro-servo-2
     desc: Unidirectional shoulder, comes with MG90S digital servo
