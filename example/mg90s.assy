@@ -12,8 +12,8 @@ links:
       length: 10
     connect:
       name: motor
-      to: "/pub/std/metric/m:m2.5-hole-2.5"
-      toInstance: mount-top-front
+      to: "/pub/std/metric/m:m2.5-thru-2.5"
+      toInstance: top-front
   - part: fastener/socketheadcap-iso4762
     package: /pub/std/metric/cqwarehouse
     name: screw-bottom
@@ -22,8 +22,8 @@ links:
       length: 10
     connect:
       name: motor
-      to: "/pub/std/metric/m:m2.5-hole-2.5"
-      toInstance: mount-bottom-front
+      to: "/pub/std/metric/m:m2.5-thru-2.5"
+      toInstance: bottom-front
 
   # Servo shoulder
   - part: servo/shoulder-unidir
