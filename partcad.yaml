@@ -1,4 +1,6 @@
 desc: TowerPro parts
+cover:
+  assembly: example/mg90s
 docs:
   name: /pub/electromechanics/towerpro
 
